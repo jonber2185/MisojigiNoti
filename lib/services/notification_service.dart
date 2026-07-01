@@ -114,7 +114,7 @@ class NotificationService {
       matchDateTimeComponents: repeat ? DateTimeComponents.time : null,
       payload: payload,
     );
-    print("?Œë¦¼ ?¤ì • : $scheduledDate");
+    print("ì•Œë¦¼ ì„¤ì • : $scheduledDate");
   }
 
   static DateTime getTime({int hour = 0, int minute = 0}) {
@@ -129,12 +129,12 @@ class NotificationService {
   static Future<void> cancelAlarms([List<int> ids = const []]) async {
     if (ids.isEmpty) {
       await flutterLocalNotificationsPlugin.cancelAll();
-      print("?Œë¦¼ ?„ë? ?? œ");
+      print("ì•Œë¦¼ ì „ì²´ ì·¨ì†Œ");
     } else {
       Future.forEach(ids, (id) async {
         await flutterLocalNotificationsPlugin.cancel(id);
       });
-      print("?Œë¦¼ ?? œ : $ids");
+      print("ì•Œë¦¼ ì·¨ì†Œ : $ids");
     }
   }
 }

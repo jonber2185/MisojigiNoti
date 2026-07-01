@@ -31,7 +31,7 @@ class CalendarService {
         return events.firstOrNull;
       }
     } else {
-      print("calendr�?조회?????�습?�다.");
+      print("calendar 조회 실패");
     }
     return null;
   }

@@ -25,12 +25,12 @@ class _BreakScreenState extends State<BreakScreen> {
   Future<void> _onPressed() async {
     await NotificationService.addAlarm(
       id: 3,
-      title: "?�갈 ?�간?�에??",
-      msg: "?�식 종료 3�??�에 ?�람???�려??",
+      title: "복귀할 시간이에요",
+      msg: "휴식 종료 3분 전에 알람이 울려요",
       time: pickedDate.add(Duration(minutes: 27)),
     );
     await NotificationService.cancelAlarms([1, 2]);
-    ToastService.showToast("?�게?�간 ?�정 ?�료");
+    ToastService.showToast("휴게시간 설정 완료");
   }
 
   Future<void> _popUp() async {
@@ -53,7 +53,7 @@ class _BreakScreenState extends State<BreakScreen> {
                   onPressed: () => Navigator.pop(context),
                 ),
                 CupertinoButton(
-                  child: Text("?�료"),
+                  child: Text("완료"),
                   onPressed: () {
                     _onPressed();
                     Navigator.pop(context);

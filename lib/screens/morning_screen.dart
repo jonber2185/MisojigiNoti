@@ -17,40 +17,40 @@ class _MorningScreenState extends State<MorningScreen> {
     await NotificationService.cancelAlarms();
     await NotificationService.addAlarm(
       id: 0,
-      title: "?�늘 ?�정???�인?�봐??",
-      msg: "?�릭만으�??�람???�록?�요!",
+      title: "오늘 일정을 확인해봐요",
+      msg: "클릭만으로 새 알람을 등록해요!",
       time: NotificationService.getTime(hour: 8),
       repeat: true,
       payload: "morning",
     );
 
-    Event? event = await CalendarService.getTodayEvent(name: "??);
+    Event? event = await CalendarService.getTodayEvent(name: "일");
 
     if (event == null ||
         await NotificationService.getAlarms().then(
           (response) => response.contains(3),
         )) {
-      ToastService.showToast("?�정 ?�음");
-      print("event ?�음");
+      ToastService.showToast("일정 없음");
+      print("event 없음");
     } else {
       final startTime = event.start!.subtract(const Duration(minutes: 3));
       final breakTime = event.start!.add(Duration(hours: 1, minutes: 50));
 
       await NotificationService.addAlarm(
         id: 1,
-        title: "?�갈 ?�간?�에??",
-        msg: "출근 3�??�에 ?�람???�려??",
+        title: "내려갈 시간이에요!",
+        msg: "출근 3분 전에 알람이 울려요",
         time: startTime,
       );
       await NotificationService.addAlarm(
         id: 2,
-        title: "?�개?�간?�신가??",
-        msg: "?�확???�간???�력?�주?�요!",
+        title: "쉬는 시간이신가요?",
+        msg: "정확한 시간을 입력해주세요!",
         time: breakTime,
         payload: "break",
       );
-      ToastService.showToast("?�정 ?�록 ?�료");
-      print("?�정 ?�록 ?�료");
+      ToastService.showToast("일정 등록 완료");
+      print("일정 등록 완료");
     }
 
     if (!mounted) return;
