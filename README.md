@@ -4,7 +4,7 @@
 
 [한국어](README.ko.md)
 
-![Home](./images/home.jpg)
+<img src="./images/home.jpg" width="240"/>
 
 ---
 
@@ -31,7 +31,7 @@ On first launch, the app requests notification and calendar access — both are 
 
 ### Home
 
-![Home](./images/home.jpg)
+<img src="./images/home.jpg" width="240"/>
 
 Three cards to quickly access Morning setup, Break time, and Alarm status.
 

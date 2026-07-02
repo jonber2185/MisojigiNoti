@@ -1,10 +1,10 @@
-# CGV Notification
+# Misojigi Notification
 
 > 기기 캘린더에서 CGV 근무 일정을 읽어 출근 알람과 휴게 알람을 자동으로 설정해주는 Flutter 모바일 앱입니다.
 
 [English](README.md)
 
-![홈](./images/home.jpg)
+<img src="./images/home.jpg" width="240"/>
 
 ---
 
@@ -31,7 +31,7 @@
 
 ### 홈
 
-![홈](./images/home.jpg)
+<img src="./images/home.jpg" width="240"/>
 
 아침 설정, 휴게 시간, 알람 현황으로 이동하는 3개의 카드.
 
